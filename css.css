@@ -1,0 +1,635 @@
+/* css.css */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121826;
+    color: #e0e0e0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}   
+
+/* Hero Section with Video Background */
+.hero-section {
+    position: relative; /* Importante para posicionar el contenedor del video */
+    background-color: #121826; /* Color de fondo de respaldo por si el video no carga */
+    color: white;
+    text-align: center;
+    padding: 0; /* Ajusta el padding según necesites */
+    overflow: hidden; /* Oculta cualquier desbordamiento del video */
+    display: flex; /* Para centrar verticalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido si es necesario */
+    min-height: 500px; /* Ajusta la altura mínima según tu diseño */
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Cubre todo el contenedor manteniendo la proporción */
+}
+
+.hero-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 20px; /* Ajusta el padding para el contenido sobre el video */
+    position: relative; /* Asegura que el contenido esté sobre el video */
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+}
+
+.hero-logo {
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #bbdefb;
+}
+
+.hero-buttons a {
+    margin: 0 15px;
+}
+
+/* Ajustes para el resto del CSS si es necesario para la superposición del video */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.primary-button {
+    background-color: #64b5f6;
+    color: #121826;
+}
+
+.primary-button:hover {
+    background-color: #81d4fa;
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: #64b5f6;
+    border: 2px solid #64b5f6;
+}
+
+.secondary-button:hover {
+    background-color: #64b5f6;
+    color: #121826;
+}
+
+.section-title {
+    color: #64b5f6;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #37474f;
+}
+
+.section-description {
+    color: #cfd8dc;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.section-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('img/hero-bg.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.hero-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.hero-logo {
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #bbdefb;
+}
+
+.hero-buttons a {
+    margin: 0 15px;
+}
+
+/* Navigation */
+.main-navigation {
+    background-color: #1c2533;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    color: #bbdefb;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1em;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #64b5f6;
+}
+
+
+/* Estilos para el menú hamburguesa */
+.mobile-nav-toggle {
+    position: absolute;
+    top: 20px; /* Ajusta la posición vertical */
+    right: 20px; /* Ajusta la posición horizontal */
+    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Oculto por defecto en pantallas grandes */
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #e0e0e0; /* Color de las líneas */
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+    top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+/* Estilos para el menú hamburguesa */
+.mobile-nav-toggle {
+    position: absolute;
+    top: 20px; /* Ajusta la posición vertical */
+    right: 20px; /* Ajusta la posición horizontal */
+    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Oculto por defecto */
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #e0e0e0; /* Color de las líneas */
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+    top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+/* Estilos para el menú hamburguesa cuando está activo */
+.hamburger.open span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -30px;
+}
+
+.hamburger.open span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+}
+
+/* Ocultar la navegación principal por defecto */
+.main-navigation {
+    display: none;
+    position: fixed; /* Para que se superponga al contenido */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c2533; /* Fondo oscuro para el menú desplegable */
+    z-index: 1000;
+    overflow-y: auto; /* Para el caso de muchos elementos en el menú */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Para mostrar los enlaces en columna */
+}
+
+.main-navigation.open {
+    display: flex;
+}
+
+.main-navigation .nav-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-navigation .nav-link {
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+.mobile-nav-toggle {
+    position: fixed; /* Cambiamos a fixed para que se quede en la ventana */
+    top: 20px; /* Ajusta la posición vertical */
+    right: 20px; /* Ajusta la posición horizontal */
+    z-index: 1001; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Oculto por defecto en pantallas grandes */
+}
+
+/* Mostrar el botón hamburguesa en todas las resoluciones */
+.mobile-nav-toggle {
+    display: block;   
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-content p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #cfd8dc;
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 0;
+    background-color: #1c2533;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: #263238;
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    color: #81d4fa;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.service-card p {
+    color: #cfd8dc;
+    line-height: 1.7;
+}
+
+.services-section .bottom-image {
+    margin-top: 60px;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 80px 0;
+}
+
+.pricing-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.pricing-item {
+    background-color: #263238;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid #64b5f6;
+}
+
+.pricing-item strong {
+    font-size: 1.3em;
+    color: #81d4fa;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pricing-item p {
+    color: #cfd8dc;
+    line-height: 1.7;
+}
+
+.pricing-section .call-to-action {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: #81d4fa;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 80px 0;
+    background-color: #1c2533;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+
+/* Blog Section */
+.blog-section {
+    padding: 80px 0;
+    background-color: #1c2533;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.blog-item {
+    background-color: #263238;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 5px solid #81d4fa;
+}
+
+.blog-item strong {
+    color: #81d4fa;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-info li {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #cfd8dc;
+}
+
+.contact-info li strong {
+    color: #81d4fa;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #263238;
+    color: #b0bec5;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 80px;
+    font-size: 0.9em;
+}
+
+.main-footer .container {
+    border-top: 1px solid #37474f;
+    padding-top: 20px;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5em;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebc59;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 100px 0;
+    }
+
+    .hero-title {
+        font-size: 2.8em;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3em;
+    }
+
+    .main-navigation .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-navigation .nav-link {
+        margin: 10px 0;
+        font-size: 1.1em;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .pricing-list {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info li {
+        font-size: 1.1em;
+    }
+}
+/* Responsive Design para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .hero-buttons a {
+        display: block; /* Hace que cada botón ocupe una línea completa */
+        margin: 10px 0; 
+        padding: 10px 20px;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .contact-info li {
+        font-size: 1em;
+    }
+}
